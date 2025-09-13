@@ -43,6 +43,8 @@
 
 body,
 h1,
+h2,
+h4,
 p {
   margin: 0;
 }
@@ -196,6 +198,129 @@ body {
   column-gap: 30px;
 }
 
+/* MAIN SECTION | ITEMS */
+.section-product {
+  display: flex;
+  justify-content: center;
+  padding: 50px 0 50px;
+}
+
+.product-arrivals {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 30px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.product-container {
+  max-width: 490px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  overflow: hidden;
+}
+
+.arrivals-subtitle {
+  font-family: "Integral CF", serif;
+  font-size: 32px;
+  text-align: center;
+}
+
+.list-new__arrivals {
+  width: auto;
+  display: flex;
+  gap: 15px;
+  overflow-x: scroll;
+  margin-left: 16px;
+}
+
+.product-card {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Product Info */
+.cloth-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.product-title {
+  font-size: 16px;
+  text-transform: capitalize;
+  font-weight: 600;
+}
+
+.product-rating {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.list-star {
+  display: flex;
+  gap: 3px;
+}
+
+.rating-number {
+  font-size: 12px;
+}
+
+.total-star {
+  opacity: 0.6;
+}
+
+.product-pricing {
+  font-size: 20px;
+  display: flex;
+  gap: 5px;
+}
+
+.product-price {
+  font-weight: 600;
+}
+
+.product-original-price {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.product-discount {
+  font-size: 10px;
+  color: rgb(255, 51, 51);
+  padding: 6px 14px;
+  border-radius: 62px;
+  background-color: rgba(255, 51, 51, 0.1);
+}
+
+/* Product Image */
+.product-image {
+  width: 198px;
+  height: 200px;
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+.product-image img {
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Button */
+.product-container .btn {
+  --margin-inline: 36px;
+  align-self: center;
+  width: calc(100% - var(--margin-inline));
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  text-transform: capitalize;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
 /* BREAKPOINTS */
 /* DESKTOP: 1280PX */
 @media screen and (min-width: 1280px) {
@@ -315,5 +440,70 @@ body {
 
   .part-logo img {
     height: 100%;
+  }
+
+  /* MAIN SECTION | ITEMS */
+  .product-arrivals {
+    padding-bottom: 60px;
+  }
+
+  .arrivals-subtitle {
+    font-size: 45px;
+  }
+
+  .product-container {
+    max-width: 1239px;
+    gap: 50px;
+  }
+
+  .list-new__arrivals {
+    width: 100%;
+    margin: 0;
+    justify-content: space-between;
+  }
+
+  .product-card {
+    gap: 15px;
+  }
+
+  .product-title {
+    font-size: 20px;
+  }
+
+  .cloth-info {
+    gap: 6px;
+  }
+
+  .rating-star {
+    width: 18px;
+    height: 18px;
+  }
+
+  .rating-number {
+    font-size: 14px;
+  }
+
+  .product-pricing {
+    font-size: 24px;
+    gap: 10px;
+  }
+
+  .product-price {
+    font-size: 24px;
+  }
+
+  .product-discount {
+    font-size: 12px;
+  }
+
+  /* Image */
+  .product-image {
+    width: 295px;
+    height: 298px;
+  }
+
+  /* Button */
+  .product-container .btn {
+    width: 218px;
   }
 }
